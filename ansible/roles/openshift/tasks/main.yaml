@@ -1,0 +1,11 @@
+- name: Install openshift
+  copy:
+    src: "{{item}}"
+    dest: "/usr/bin"
+    owner: "{{oc_user}}"
+    mode: 755
+  with_fileglob:
+    - "openshift/*"
+  notify:
+    - Start openshift origin
+

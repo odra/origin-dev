@@ -1,0 +1,17 @@
+---
+- name: Install yum utils
+  yum:
+    name: yum-utils
+
+- name: Install git
+  yum:
+    name: git
+
+- name: Install vim
+  yum:
+    name: vim
+
+- name: Install wget
+  yum:
+    name: wget
+

@@ -1,0 +1,2 @@
+- name: Start openshift origin
+  command: "oc cluster up --public-hostname {{oc_public_addr}}"

@@ -1,0 +1,7 @@
+- name: Install s2i cli tool
+  copy:
+    src: s2i
+    dest: /usr/bin/s2i
+    owner: vagrant
+    mode: 0755
+

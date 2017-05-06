@@ -1,0 +1,29 @@
+- name: Add docker repo
+  copy:
+    src: docker.repo
+    dest: /etc/yum.repos.d/docker.repo
+
+- name: Install Docker
+  yum:
+    name: docker
+
+- name: Add docker config file
+  copy:
+    src: docker
+    dest: /etc/sysconfig/docker
+
+- name: Create docker group
+  group:
+    name: docker
+
+- name: Add vagrant to docker group
+  user:
+    name: vagrant
+    group: docker
+    append: yes
+
+- name: Start docker service
+  service:
+    name: docker
+    state: started
+

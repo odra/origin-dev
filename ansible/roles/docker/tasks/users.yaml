@@ -1,0 +1,10 @@
+- name: Create docker group
+  group:
+    name: docker
+
+- name: Add vagrant to docker group
+  user:
+    name: vagrant
+    group: docker
+    append: yes
+

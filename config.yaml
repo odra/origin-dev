@@ -1,0 +1,14 @@
+---
+origin:
+  name: openshift-origin
+  hostname: openshift.origin
+  resources:
+    cpus: 2
+    memory: 3586
+  network:
+    private:
+      ip: 192.168.50.4
+  key:
+    private: ~/.ssh/id_rsa
+    public: ~/.ssh/id_rsa.pub
+

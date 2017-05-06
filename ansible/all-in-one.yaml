@@ -1,0 +1,8 @@
+---
+- hosts: origin
+  become: true
+  roles:
+    - common
+    - docker
+    - source2image
+    - openshift
